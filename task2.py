@@ -29,10 +29,10 @@ model=MLP(input_size=1,hidden_size=64,output_size=1)
 criterion=nn.MSELoss()
 optimizer=optim.Adam(model.parameters(),lr=0.001)
 
-        # 4. 训练+保存
+       
 epochs = 1000
-save_epochs = [10, 100, 1000]  # 要可视化的epoch
-model_states = {}  # 存储指定epoch的模型参数
+save_epochs = [10, 100, 1000]  
+model_states = {}  
 for epoch in range(1, epochs+1):
     model.train()
     optimizer.zero_grad()
@@ -40,15 +40,15 @@ for epoch in range(1, epochs+1):
     loss = criterion(y_pred, y)
     loss.backward()
     optimizer.step()
+
     
-    # 保存指定epoch的参数
     if epoch in save_epochs:
         model_states[epoch] = model.state_dict()
         print(f"Epoch [{epoch}/{epochs}], Loss: {loss.item():.4f}")
 
 plt.figure(figsize=(10,6))
 
-# 核心：先画曲线，再画散点（避免被覆盖）
+
 sorted_idx = x.numpy().argsort(axis=0).flatten()
 sorted_x = x.numpy()[sorted_idx]
 
@@ -66,13 +66,13 @@ for idx, epoch in enumerate(save_epochs):
              label=f'Epoch {epoch}',
              linewidth=2)
 
-# 最后画散点，调整大小和透明度
+
 plt.scatter(x.numpy(), y.numpy(), 
             label='原始数据', 
-            s=10,  # 调大点的尺寸
-            alpha=0.8,  # 提高透明度
+            s=10,  
+            alpha=0.8,  
             color='blue',
-            zorder=3)  # 强制散点显示在最上层
+            zorder=3) 
 
 plt.xlabel('x')
 plt.ylabel('y')
