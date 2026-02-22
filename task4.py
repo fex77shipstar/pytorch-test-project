@@ -52,7 +52,7 @@ class ResidualBlock(nn.Module):
         out += self.shortcut(x)
         out = F.relu(out)
         return out
-
+# ---------------------- 3.策略优化：warmup+mixup ----------------------
 class ImprovedCNN(nn.Module):
     def __init__(self):
         super(ImprovedCNN, self).__init__()
@@ -226,4 +226,5 @@ if __name__ == '__main__':
 
     imshow(torchvision.utils.make_grid(images[:8]))
     print('GroundTruth: ', ' '.join(f'{classes[labels[j]]:5s}' for j in range(8)))
+
     print('Predicted:   ', ' '.join(f'{classes[predicted[j]]:5s}' for j in range(8)))
