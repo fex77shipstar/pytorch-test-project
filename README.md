@@ -5,11 +5,13 @@
 ## 任务介绍
 
 ### Task2：MLP 数据拟合与可视化
-读取 CSV 文件，使用 MLP 模型进行数据拟合，并可视化不同训练轮次的拟合效果。
-
+- 读取 CSV 文件，使用 MLP 模型进行数据拟合，并可视化不同训练轮次的拟合效果。
+- 详细说明：[task2.md](task2.md)
+  
 ### Task3：CNN 图像分类（CIFAR-10）
-基于 CNN 实现 CIFAR-10 图像分类，掌握卷积网络基本流程。
-
+- 基于 CNN 实现 CIFAR-10 图像分类，掌握卷积网络基本流程。
+- 详细说明：[task3.md](task3.md)
+  
 ### Task4：CIFAR-10 模型优化（ResNet+Warmup+Mixup）
 - 残差结构改进模型
 - Warmup 学习率 + Mixup 数据增强
