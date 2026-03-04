@@ -152,62 +152,6 @@ if __name__ == '__main__':
             loss = train(net, trainloader, criterion, optimizer, scheduler, use_mixup=use_trick)
             acc = test(net, testloader)
             print(f'Epoch {epoch+1}, Loss: {loss:.3f}, Test Acc: {acc:.2f}%')
-            
-def train(net, trainloader, criterion, optimizer, scheduler, use_mixup=True, alpha=0.2):
-    net.train()
-    running_loss = 0.0
-    for i, (inputs, labels) in enumerate(trainloader):
-        inputs, labels = inputs.cuda(), labels.cuda()
-        if use_mixup:
-            inputs, targets_a, targets_b, lam = mixup_data(inputs, labels, alpha)
-            outputs = net(inputs)
-            loss = mixup_criterion(criterion, outputs, targets_a, targets_b, lam)
-        else:
-            outputs = net(inputs)
-            loss = criterion(outputs, labels)
-        
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        running_loss += loss.item()
-    if scheduler is not None:
-        scheduler.step()
-    return running_loss / len(trainloader)
-
-def test(net, testloader):
-    net.eval()
-    correct = 0
-    total = 0
-    with torch.no_grad():
-        for data in testloader:
-            images, labels = data
-            images, labels = images.cuda(), labels.cuda()
-            outputs = net(images)
-            _, predicted = torch.max(outputs.data, 1)
-            total += labels.size(0)
-            correct += (predicted == labels).sum().item()
-    return 100 * correct / total
-
-# ---------------------- 5. 主函数：对比实验 ----------------------
-if __name__ == '__main__':
-    # 计算参数量与FLOPs
-    net = ImprovedCNN().cuda()
-    input = torch.randn(1, 3, 32, 32).cuda()
-    flops, params = profile(net, inputs=(input, ))
-    print(f"参数量: {params/1e6:.2f} M, FLOPs: {flops/1e6:.2f} M")
-
-    # 对比实验：有无Warmup+Mixup
-    for use_trick in [False, True]:
-        net = ImprovedCNN().cuda()
-        criterion = nn.CrossEntropyLoss()
-        optimizer = torch.optim.Adam(net.parameters(), lr=0.001)
-        scheduler = get_warmup_scheduler(optimizer) if use_trick else None
-        
-        print(f"\n=== 使用Warmup+Mixup: {use_trick} ===")
-        for epoch in range(20):
-            loss = train(net, trainloader, criterion, optimizer, scheduler, use_mixup=use_trick)
-            acc = test(net, testloader)
-            print(f'Epoch {epoch+1}, Loss: {loss:.3f}, Test Acc: {acc:.2f}%')
 
     # 可视化预测结果
     def imshow(img):
@@ -228,3 +172,4 @@ if __name__ == '__main__':
     print('GroundTruth: ', ' '.join(f'{classes[labels[j]]:5s}' for j in range(8)))
 
     print('Predicted:   ', ' '.join(f'{classes[predicted[j]]:5s}' for j in range(8)))
+
