@@ -135,7 +135,7 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, print_freq=10)
         if i % print_freq == 0:
             print(f"Epoch {epoch}, Iteration {i}, Loss: {losses.item():.4f}")
 
-# ---------------------- 5. 可视化函数（已修复） ----------------------
+# ---------------------- 5. 可视化函数 ----------------------
 def visualize(image, target, prediction=None):
     plt.figure(figsize=(12, 8))
     plt.imshow(image)
@@ -167,7 +167,7 @@ def visualize(image, target, prediction=None):
 
     plt.axis('off')
     plt.show()
-    # ---------------------- 7. 主程序 (修正版) ----------------------
+    # ---------------------- 6. 主程序 ----------------------
 if __name__ == "__main__":
     data_root = r"C:\Users\asus\Desktop\myproject\PennFudanPed\PennFudanPed"
     num_classes = 2
@@ -228,4 +228,5 @@ if __name__ == "__main__":
             visualize(original_img, targets[0], outputs[0])
 
             if i > 5:
+
                 break
