@@ -1,0 +1,29 @@
+Epoch 1, Loss: 1.606
+Epoch 2, Loss: 1.339
+Epoch 3, Loss: 1.223
+Epoch 4, Loss: 1.138
+Epoch 5, Loss: 1.091
+Epoch 6, Loss: 1.041
+Epoch 7, Loss: 1.004
+Epoch 8, Loss: 0.980
+Epoch 9, Loss: 0.953
+Epoch 10, Loss: 0.937
+Epoch 11, Loss: 0.916
+Epoch 12, Loss: 0.896
+Epoch 13, Loss: 0.883
+Epoch 14, Loss: 0.872
+Epoch 15, Loss: 0.853
+Epoch 16, Loss: 0.844
+Epoch 17, Loss: 0.834
+Epoch 18, Loss: 0.817
+Epoch 19, Loss: 0.810
+Epoch 20, Loss: 0.800
+Test Accuracy: 73.79%
+GroundTruth: cat ship ship plane frog frog car frog
+Predicted: cat car ship plane frog frog car frog
+
+debug 复盘
+（1）全连接层输入维度算错：nn.Linear(32*8*8,128)。当我将卷积层数变化时，这里会报
+错，主要是因为后续忘记用 x.view()展平，直接丢进了全连接层。
+（2）网络过浅，学习率设置不当，导致模型精度偏低，难以收敛。
+（3）CIFAR-10 下载经常超时，运行到 trainset 直接报错。换网络环境。

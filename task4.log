@@ -1,0 +1,107 @@
+NVIDIA GeForce RTX 5070 Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5070 Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+参数量: 0.08 M, FLOPs: 12.85 M
+
+=== 使用Warmup+Mixup: False ===
+Epoch 1, Loss: 1.571, Test Acc: 48.56%
+Epoch 2, Loss: 1.189, Test Acc: 59.61%
+Epoch 3, Loss: 1.037, Test Acc: 60.12%
+Epoch 4, Loss: 0.944, Test Acc: 65.65%
+Epoch 5, Loss: 0.875, Test Acc: 63.88%
+Epoch 6, Loss: 0.820, Test Acc: 71.33%
+Epoch 7, Loss: 0.784, Test Acc: 71.74%
+Epoch 8, Loss: 0.743, Test Acc: 73.84%
+Epoch 9, Loss: 0.716, Test Acc: 73.48%
+Epoch 10, Loss: 0.691, Test Acc: 75.06%
+Epoch 11, Loss: 0.668, Test Acc: 73.49%
+Epoch 12, Loss: 0.649, Test Acc: 76.15%
+Epoch 13, Loss: 0.633, Test Acc: 73.49%
+Epoch 14, Loss: 0.615, Test Acc: 76.41%
+Epoch 15, Loss: 0.601, Test Acc: 78.18%
+Epoch 16, Loss: 0.588, Test Acc: 77.33%
+Epoch 17, Loss: 0.579, Test Acc: 78.17%
+Epoch 18, Loss: 0.563, Test Acc: 77.32%
+Epoch 19, Loss: 0.553, Test Acc: 75.30%
+Epoch 20, Loss: 0.547, Test Acc: 78.80%
+
+=== 使用Warmup+Mixup: True ===
+Epoch 1, Loss: 1.915, Test Acc: 42.70%
+Epoch 2, Loss: 1.621, Test Acc: 50.54%
+Epoch 3, Loss: 1.468, Test Acc: 53.12%
+Epoch 4, Loss: 1.381, Test Acc: 55.46%
+Epoch 5, Loss: 1.316, Test Acc: 61.49%
+Epoch 6, Loss: 1.241, Test Acc: 64.28%
+Epoch 7, Loss: 1.209, Test Acc: 64.20%
+Epoch 8, Loss: 1.169, Test Acc: 66.78%
+Epoch 9, Loss: 1.129, Test Acc: 66.19%
+Epoch 10, Loss: 1.105, Test Acc: 69.36%
+Epoch 11, Loss: 1.095, Test Acc: 73.09%
+Epoch 12, Loss: 1.066, Test Acc: 72.86%
+Epoch 13, Loss: 1.017, Test Acc: 75.02%
+Epoch 14, Loss: 1.038, Test Acc: 76.38%
+Epoch 15, Loss: 0.984, Test Acc: 76.10%
+Epoch 16, Loss: 0.961, Test Acc: 77.65%
+Epoch 17, Loss: 0.958, Test Acc: 77.96%
+Epoch 18, Loss: 0.951, Test Acc: 78.72%
+Epoch 19, Loss: 0.996, Test Acc: 79.06%
+Epoch 20, Loss: 0.982, Test Acc: 78.79%
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+参数量: 0.08 M, FLOPs: 12.85 M
+
+=== 使用Warmup+Mixup: False ===
+Epoch 1, Loss: 1.565, Test Acc: 46.29%
+Epoch 2, Loss: 1.178, Test Acc: 56.25%
+Epoch 3, Loss: 1.018, Test Acc: 60.73%
+Epoch 4, Loss: 0.931, Test Acc: 65.38%
+Epoch 5, Loss: 0.872, Test Acc: 66.05%
+Epoch 6, Loss: 0.819, Test Acc: 69.42%
+Epoch 7, Loss: 0.778, Test Acc: 68.98%
+Epoch 8, Loss: 0.741, Test Acc: 69.61%
+Epoch 9, Loss: 0.712, Test Acc: 73.32%
+Epoch 10, Loss: 0.688, Test Acc: 72.91%
+Epoch 11, Loss: 0.669, Test Acc: 75.26%
+Epoch 12, Loss: 0.648, Test Acc: 75.79%
+Epoch 13, Loss: 0.629, Test Acc: 75.74%
+Epoch 14, Loss: 0.617, Test Acc: 76.18%
+Epoch 15, Loss: 0.605, Test Acc: 76.44%
+Epoch 16, Loss: 0.589, Test Acc: 77.67%
+Epoch 17, Loss: 0.577, Test Acc: 77.40%
+Epoch 18, Loss: 0.570, Test Acc: 77.12%
+Epoch 19, Loss: 0.555, Test Acc: 79.16%
+Epoch 20, Loss: 0.549, Test Acc: 77.70%
+
+=== 使用Warmup+Mixup: True ===
+Epoch 1, Loss: 1.878, Test Acc: 43.29%
+Epoch 2, Loss: 1.641, Test Acc: 52.25%
+Epoch 3, Loss: 1.524, Test Acc: 54.86%
+Epoch 4, Loss: 1.389, Test Acc: 50.85%
+Epoch 5, Loss: 1.280, Test Acc: 61.33%
+Epoch 6, Loss: 1.230, Test Acc: 63.18%
+Epoch 7, Loss: 1.175, Test Acc: 66.80%
+Epoch 8, Loss: 1.131, Test Acc: 70.11%
+Epoch 9, Loss: 1.092, Test Acc: 64.98%
+Epoch 10, Loss: 1.058, Test Acc: 70.07%
+Epoch 11, Loss: 1.065, Test Acc: 72.58%
+Epoch 12, Loss: 1.009, Test Acc: 75.22%
+Epoch 13, Loss: 1.010, Test Acc: 72.83%
+Epoch 14, Loss: 1.000, Test Acc: 76.88%
+Epoch 15, Loss: 0.979, Test Acc: 77.06%
+Epoch 16, Loss: 0.973, Test Acc: 77.33%
+Epoch 17, Loss: 0.998, Test Acc: 77.75%
+Epoch 18, Loss: 0.962, Test Acc: 78.17%
+Epoch 19, Loss: 0.961, Test Acc: 78.89%
+Epoch 20, Loss: 0.975, Test Acc: 79.01%
+GroundTruth:  cat   ship  ship  plane frog  frog  car   frog 
+Predicted:    cat   ship  ship  ship  frog  frog  cat   frog 
+这里面出现了硬调用，当我的显卡（RTX 5070，sm_120）和 PyTorch 版本不兼容时，可能就会报错，这点也让我意识到，下载的时候一定要认清自己的电脑性能，
+避免浪费不必要的时间和精力，甚至对结果产生一些影响（这个我还没来得及改，我怕重新下载，会导致我其他任务受牵连。但我又只想通过cuda版本的这个释出。。。）

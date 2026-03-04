@@ -1,0 +1,76 @@
+使用设备: cuda
+C:\Users\asus\AppData\Roaming\Python\Python39\site-packages\torch\cuda\__init__.py:287: UserWarning: 
+NVIDIA GeForce RTX 5070 Laptop GPU with CUDA capability sm_120 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90 compute_37.
+If you want to use the NVIDIA GeForce RTX 5070 Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(
+Epoch 0, Iteration 0, Loss: 2.6504
+Epoch 0, Iteration 10, Loss: 0.4141
+Epoch 0, Iteration 20, Loss: 0.6536
+Epoch 0, Iteration 30, Loss: 0.3323
+Epoch 0, Iteration 40, Loss: 0.3442
+Epoch 0, Iteration 50, Loss: 0.1843
+Epoch 1, Iteration 0, Loss: 0.2793
+Epoch 1, Iteration 10, Loss: 0.1944
+Epoch 1, Iteration 20, Loss: 0.2483
+Epoch 1, Iteration 30, Loss: 0.1834
+Epoch 1, Iteration 40, Loss: 0.2140
+Epoch 1, Iteration 50, Loss: 0.2471
+Epoch 2, Iteration 0, Loss: 0.2390
+Epoch 2, Iteration 10, Loss: 0.3090
+Epoch 2, Iteration 20, Loss: 0.2052
+Epoch 2, Iteration 30, Loss: 0.2507
+Epoch 2, Iteration 40, Loss: 0.1906
+Epoch 2, Iteration 50, Loss: 0.1434
+Epoch 3, Iteration 0, Loss: 0.2307
+Epoch 3, Iteration 10, Loss: 0.2099
+Epoch 3, Iteration 20, Loss: 0.1890
+Epoch 3, Iteration 30, Loss: 0.2329
+Epoch 3, Iteration 40, Loss: 0.2065
+Epoch 3, Iteration 50, Loss: 0.1217
+Epoch 4, Iteration 0, Loss: 0.1345
+Epoch 4, Iteration 10, Loss: 0.1833
+Epoch 4, Iteration 20, Loss: 0.2306
+Epoch 4, Iteration 30, Loss: 0.1698
+Epoch 4, Iteration 40, Loss: 0.2052
+Epoch 4, Iteration 50, Loss: 0.1398
+Epoch 5, Iteration 0, Loss: 0.2220
+Epoch 5, Iteration 10, Loss: 0.1282
+Epoch 5, Iteration 20, Loss: 0.1640
+Epoch 5, Iteration 30, Loss: 0.1658
+Epoch 5, Iteration 40, Loss: 0.1305
+Epoch 5, Iteration 50, Loss: 0.1678
+Epoch 6, Iteration 0, Loss: 0.1450
+Epoch 6, Iteration 10, Loss: 0.2611
+Epoch 6, Iteration 20, Loss: 0.2426
+Epoch 6, Iteration 30, Loss: 0.1313
+Epoch 6, Iteration 40, Loss: 0.1430
+Epoch 6, Iteration 50, Loss: 0.2213
+Epoch 7, Iteration 0, Loss: 0.1382
+Epoch 7, Iteration 10, Loss: 0.1743
+Epoch 7, Iteration 20, Loss: 0.1501
+Epoch 7, Iteration 30, Loss: 0.1987
+Epoch 7, Iteration 40, Loss: 0.1980
+Epoch 7, Iteration 50, Loss: 0.1350
+Epoch 8, Iteration 0, Loss: 0.2001
+Epoch 8, Iteration 10, Loss: 0.1192
+Epoch 8, Iteration 20, Loss: 0.1560
+Epoch 8, Iteration 30, Loss: 0.3021
+Epoch 8, Iteration 40, Loss: 0.1726
+Epoch 8, Iteration 50, Loss: 0.1313
+Epoch 9, Iteration 0, Loss: 0.1655
+Epoch 9, Iteration 10, Loss: 0.1565
+Epoch 9, Iteration 20, Loss: 0.2059
+Epoch 9, Iteration 30, Loss: 0.1897
+Epoch 9, Iteration 40, Loss: 0.1490
+Epoch 9, Iteration 50, Loss: 0.1900
+D:\anaconda\envs\myproject\lib\tkinter\__init__.py:814: UserWarning: Glyph 21407 (\N{CJK UNIFIED IDEOGRAPH-539F}) missing from font(s) DejaVu Sans.
+  func(*args)
+D:\anaconda\envs\myproject\lib\tkinter\__init__.py:814: UserWarning: Glyph 22987 (\N{CJK UNIFIED IDEOGRAPH-59CB}) missing from font(s) DejaVu Sans.
+  func(*args)
+D:\anaconda\envs\myproject\lib\tkinter\__init__.py:814: UserWarning: Glyph 32431 (\N{CJK UNIFIED IDEOGRAPH-7EAF}) missing from font(s) DejaVu Sans.
+  func(*args)
+D:\anaconda\envs\myproject\lib\tkinter\__init__.py:814: UserWarning: Glyph 22270 (\N{CJK UNIFIED IDEOGRAPH-56FE}) missing from font(s) DejaVu Sans.
+  func(*args)
+这个和task3同理，码里用到了 matplotlib（比如 plt.figure()、plt.title("原始纯原图")），而它默认的字体 DejaVu Sans 不包含中文字符，所以在渲染中文标题/标签时会弹出警告。
