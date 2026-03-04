@@ -36,3 +36,9 @@
 - matplotlib
 - numpy
 - thop
+
+# 运行日志
+- [task2 log](logs/task2.log)
+- [task3 log](logs/task3.log)
+- [task4 log](logs/task4.log)
+- [task5 log](logs/task5.log)
